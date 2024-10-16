@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .control-panel {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function updateStep(step) {
+            fetch('/control_update?step=' + step)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        console.log('Step updated successfully');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <div class="control-panel">
+        <h2>Panel</h2>
+        <ul>
+            <li><a href="#" onclick="updateStep(1); return false;">Paso 1</a></li>
+            <li><a href="#" onclick="updateStep(2); return false;">Paso 2</a></li>
+            <li><a href="#" onclick="updateStep(3); return false;">Paso 3</a></li>
+            <li><a href="#" onclick="updateStep(4); return false;">Paso 4</a></li>
+            <li><a href="#" onclick="updateStep(5); return false;">Paso 5</a></li>
+        </ul>
+    </div>
+</body>
+</html>
