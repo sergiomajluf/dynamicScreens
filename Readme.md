@@ -42,7 +42,10 @@ Para instalar y ejecutar esta aplicación, sigue estos pasos:
      ```
      UNSPLASH_ACCESS_KEY=tu_clave_de_api_aqui
      ```
-
+   - Luego configura la app para leer la variable de enterno
+      ```
+      pip install python-dotenv
+      ```
 7. Ejecuta la aplicación:
    ```
    python app.py
