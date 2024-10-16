@@ -5,7 +5,7 @@ Esta aplicación permite mostrar contenido dinámico en una pantalla, controlado
 ## Demostración
 
 Puedes ver un video de demostración de la aplicación en funcionamiento aquí:
-[![Ver Demo]](demo-control-externo.mp4)
+https://github.com/user-attachments/assets/80ac6a0c-61ac-4977-9989-fe2c6cbe0dc9
 
 ## Características
 
