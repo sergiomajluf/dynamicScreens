@@ -5,14 +5,15 @@ Esta aplicación permite mostrar contenido dinámico en una pantalla, controlado
 ## Demostración
 
 Puedes ver un video de demostración de la aplicación en funcionamiento aquí:
+
 https://github.com/user-attachments/assets/80ac6a0c-61ac-4977-9989-fe2c6cbe0dc9
 
 ## Características
 
-- Muestra pasos numerados con contenido específico.
-- Cambia el fondo de la pantalla con cada actualización.
-- Control remoto a través de una interfaz web sencilla.
-- Transiciones suaves entre cambios de contenido y fondo.
+- En la pantalla principal, muestra pasos numerados con contenido específico.
+- Cambia el fondo de la pantalla con cada actualización, y el archivo es gestionado aleatorimente desde el servidor, usando unsplash.com (requiere API)
+- Transiciones suaves entre cambios de contenido y fondo mdainte CSS.
+- Pantalla principal es controlada remotamente a través de una interfaz web sencilla, desde un Arduino o un cliente equivalente haciendo un llamado simple HTTP GET a una URL
 
 ## Instalación
 
@@ -32,7 +33,7 @@ Para instalar y ejecutar esta aplicación, sigue estos pasos:
 
 5. Instala las dependencias necesarias:
    ```
-   pip install flask flask-socketio requests
+   pip install flask flask-socketio requests io
    ```
 
 6. Configura tu clave de API de Unsplash (para las imágenes de fondo):
